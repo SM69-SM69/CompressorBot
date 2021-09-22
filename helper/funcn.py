@@ -15,6 +15,7 @@
 from .config import *
 
 COUNT = []
+OK = {}
 
 uptime = dt.now()
 os.system("wget https://telegra.ph//file/142aa1ac2938ea73b2372.jpg -O thumb.jpg")
@@ -145,18 +146,14 @@ async def info(file, event):
 
 
 def code(data):
-    key = (
-        requests.post("https://nekobin.com/api/documents", json={"content": data})
-        .json()
-        .get("result")
-        .get("key")
-    )
-    return key
+    OK.update({len(OK): data})
+    return str(len(OK)-1)
 
 
 def decode(key):
-    a = requests.get(f"https://nekobin.com/raw/{key}")
-    return a.text
+    if OK.get(int(key)):
+        return OK[int(key)]
+    return
 
 
 async def skip(e):
