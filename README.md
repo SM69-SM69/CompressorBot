@@ -13,5 +13,5 @@
 - Its Running Without Db so Block /ban /Broadcast Feature is currently Not available.
 
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template="
-https://github.com/SM69-SM69/CompressorBot/main/")
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=
+https://github.com/SM69-SM69/CompressorBot/main)
